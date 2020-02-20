@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  background-image: url("./assets/images/bg_1.jpg");
+  background-size: cover;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  .board {
+    background-image: url("./assets/images/board_bg.jpg");
+    background-size: cover;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 5px 5px 5px #888;
+    //border: 8px solid #662e1e;
+    //border-radius: 8px;
+
+    .square {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        border-style: none;
+        outline: none;
+        box-shadow: 2px 2px 2px #888;
+        padding: 0;
+
+        &.black-chess {
+          background-image: url("./assets/images/black_bg.png");
+          background-size: cover;
+        }
+
+        &.white-chess {
+          background-image: url("./assets/images/white_bg.png");
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
