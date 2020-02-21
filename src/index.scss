@@ -11,10 +11,34 @@ body {
   justify-content: flex-start;
   align-items: center;
 
+  .status {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0 10px 0;
+
+    .next, .winner {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+
+      span {
+        font-size: 16px;
+        font-family: "Microsoft YaHei UI";
+      }
+
+      img {
+      }
+    }
+  }
+
   .board {
     background-image: url("./assets/images/board_bg.jpg");
     background-size: cover;
-    margin-top: 150px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -30,11 +54,12 @@ body {
       flex-wrap: nowrap;
       justify-content: center;
       align-items: center;
+      position: relative;
 
       button {
         border-style: none;
         outline: none;
-        box-shadow: 2px 2px 2px #888;
+        //box-shadow: 0 0 4px #888;
         padding: 0;
 
         &.black-chess {
@@ -47,6 +72,41 @@ body {
           background-size: cover;
         }
       }
+
+      .red-dot {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: red;
+        border-radius: 6px;
+        top: 50%;
+        left: 50%;
+        margin-top: -3px;
+        margin-left: -3px;
+      }
+    }
+  }
+
+  .btn-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-top: 20px;
+
+    button {
+      //height: 36px;
+      border-style: none;
+      outline: none;
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      background-image: linear-gradient(#c8a470, #8c542f);
+      border-radius: 10px;
+      font-family: "Microsoft YaHei UI";
+      padding: 10px 20px;
     }
   }
 }
